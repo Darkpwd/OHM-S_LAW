@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,8 +45,8 @@
           <div class="text-content">
             <p>
               A Lei de Ohm afirma que a corrente que flui através de um condutor
-              é diretamente proporcional à tensão aplicada a ele e inversamente
-              proporcional à sua resistência.
+              é diretamente proporcional à tensão aplicada ao condutor e
+              inversamente proporcional à sua resistência.
             </p>
             <div class="formula">
               <p class="large">V = I × R</p>
@@ -63,7 +63,7 @@
                 <div class="triangle-side i">I</div>
                 <div class="triangle-side r">R</div>
               </div>
-              <p>Cubra a variável que deseja calcular!</p>
+              <p>Cubra a quantidade que você deseja calcular!</p>
             </div>
           </div>
           <div class="image-content">
@@ -74,7 +74,7 @@
             />
             <div class="image-caption">
               <p>
-                Compreender relações elétricas é essencial para a tecnologia
+                Compreender as relações elétricas é crucial para a tecnologia
                 moderna
               </p>
             </div>
@@ -93,7 +93,7 @@
               <input
                 type="number"
                 id="voltage"
-                placeholder="Digite a tensão"
+                placeholder="Insira a tensão"
                 step="0.1"
               />
               <div class="unit">V</div>
@@ -103,7 +103,7 @@
               <input
                 type="number"
                 id="current"
-                placeholder="Digite a corrente"
+                placeholder="Insira a corrente"
                 step="0.001"
               />
               <div class="unit">A</div>
@@ -113,7 +113,7 @@
               <input
                 type="number"
                 id="resistance"
-                placeholder="Digite a resistência"
+                placeholder="Insira a resistência"
                 step="0.1"
               />
               <div class="unit">Ω</div>
@@ -173,7 +173,7 @@
             </div>
           </div>
           <div class="circuit-animation" id="circuit-animation">
-            <!-- Animação será controlada por JavaScript -->
+            <!-- A animação será gerenciada pelo JavaScript -->
           </div>
           <div class="circuit-readings">
             <div class="reading">
@@ -184,6 +184,113 @@
               <span class="label">Potência:</span>
               <span id="power-reading">0.25W</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples" class="section">
+      <div class="container">
+        <h2>Exemplos Práticos</h2>
+        <div class="examples-grid">
+          <div class="example-card">
+            <img
+              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
+              alt="Circuito de LED"
+              class="example-image"
+            />
+            <h3>Circuito de LED</h3>
+            <p>
+              Um LED típico requer 2V e 20mA de corrente. Usando a Lei de Ohm,
+              podemos calcular o valor necessário do resistor para uma fonte de
+              5V.
+            </p>
+            <div class="calculation">
+              <p>R = (5V - 2V) ÷ 0.02A = 150Ω</p>
+            </div>
+            <button class="try-it-button" onclick="loadExample('led')">
+              Experimente você mesmo
+            </button>
+          </div>
+          <div class="example-card">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1682145728214-dbd62535af3f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Circuito de Bateria"
+              class="example-image"
+            />
+            <h3>Circuito de Bateria</h3>
+            <p>
+              Uma bateria de 9V alimentando um circuito com um resistor de 100Ω.
+              Podemos calcular a corrente que flui pelo circuito.
+            </p>
+            <div class="calculation">
+              <p>I = 9V ÷ 100Ω = 0.09A = 90mA</p>
+            </div>
+            <button class="try-it-button" onclick="loadExample('battery')">
+              Experimente você mesmo
+            </button>
+          </div>
+          <div class="example-card">
+            <img
+              src="https://images.unsplash.com/photo-1597225244660-1cd128c64284?auto=format&fit=crop&w=800&q=80"
+              alt="Carregador de Celular"
+              class="example-image"
+            />
+            <h3>Carregador de Celular</h3>
+            <p>
+              Um carregador de smartphone fornece 5V e o telefone consome 2A de
+              corrente. Calcule a resistência efetiva do circuito de carga.
+            </p>
+            <div class="calculation">
+              <p>R = 5V ÷ 2A = 2.5Ω</p>
+            </div>
+            <button class="try-it-button" onclick="loadExample('charger')">
+              Experimente você mesmo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="applications" class="section">
+      <div class="container">
+        <h2>Aplicações no Mundo Real</h2>
+        <div class="applications-grid">
+          <div class="application-card">
+            <div class="card-icon">🏠</div>
+            <h3>Eletrônicos Domésticos</h3>
+            <p>
+              Compreensão dos requisitos de energia e limites de segurança para
+              dispositivos domésticos.
+            </p>
+            <ul class="application-list">
+              <li>Consumo de energia de aparelhos</li>
+              <li>Dimensionamento de disjuntores</li>
+              <li>Seleção de bitola de fios</li>
+            </ul>
+          </div>
+          <div class="application-card">
+            <div class="card-icon">⚡</div>
+            <h3>Design de Circuitos</h3>
+            <p>Projetando circuitos eletrônicos seguros e eficientes.</p>
+            <ul class="application-list">
+              <li>Seleção de componentes</li>
+              <li>Distribuição de energia</li>
+              <li>Gerenciamento de calor</li>
+            </ul>
+          </div>
+          <div class="application-card">
+            <div class="card-icon">🏭</div>
+            <h3>Distribuição de Energia</h3>
+            <p>
+              Planejamento de sistemas elétricos para edifícios e
+              infraestrutura.
+            </p>
+            <ul class="application-list">
+              <li>Cálculo de carga</li>
+              <li>Análise de queda de tensão</li>
+              <li>Planejamento de segurança</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -229,6 +336,13 @@
         </div>
       </div>
     </footer>
+
+    <div id="resource-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="modal-content"></div>
+      </div>
+    </div>
 
     <script src="scripts.js"></script>
   </body>
