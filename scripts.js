@@ -1,4 +1,4 @@
-// Theme toggle functionality
+// Alternar tema (claro/escuro)
 const themeToggle = document.querySelector(".theme-toggle");
 const body = document.body;
 
@@ -7,7 +7,7 @@ themeToggle.addEventListener("click", () => {
   themeToggle.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
 });
 
-// Smooth scroll for navigation links
+// Rolagem suave para links de navegação
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -17,7 +17,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Calculator functionality
+// Funcionalidade da calculadora
 function calculate(type) {
   const voltage = parseFloat(document.getElementById("voltage").value);
   const current = parseFloat(document.getElementById("current").value);
@@ -32,39 +32,42 @@ function calculate(type) {
       if (!isNaN(current) && !isNaN(resistance)) {
         result = current * resistance;
         power = result * current;
-        resultDiv.textContent = `Voltage = ${result.toFixed(2)} V`;
-        powerDiv.textContent = `Power (P) = ${power.toFixed(2)} Watts`;
+        resultDiv.textContent = `Tensão = ${result.toFixed(2)} V`;
+        powerDiv.textContent = `Potência (P) = ${power.toFixed(2)} Watts`;
         updateCircuitVisualization(result, current, resistance);
       } else {
-        resultDiv.textContent = "Please enter current and resistance values";
+        resultDiv.textContent =
+          "Por favor, insira os valores de corrente e resistência";
       }
       break;
     case "current":
       if (!isNaN(voltage) && !isNaN(resistance)) {
         result = voltage / resistance;
         power = voltage * result;
-        resultDiv.textContent = `Current = ${result.toFixed(2)} A`;
-        powerDiv.textContent = `Power (P) = ${power.toFixed(2)} Watts`;
+        resultDiv.textContent = `Corrente = ${result.toFixed(2)} A`;
+        powerDiv.textContent = `Potência (P) = ${power.toFixed(2)} Watts`;
         updateCircuitVisualization(voltage, result, resistance);
       } else {
-        resultDiv.textContent = "Please enter voltage and resistance values";
+        resultDiv.textContent =
+          "Por favor, insira os valores de tensão e resistência";
       }
       break;
     case "resistance":
       if (!isNaN(voltage) && !isNaN(current)) {
         result = voltage / current;
         power = voltage * current;
-        resultDiv.textContent = `Resistance = ${result.toFixed(2)} Ω`;
-        powerDiv.textContent = `Power (P) = ${power.toFixed(2)} Watts`;
+        resultDiv.textContent = `Resistência = ${result.toFixed(2)} Ω`;
+        powerDiv.textContent = `Potência (P) = ${power.toFixed(2)} Watts`;
         updateCircuitVisualization(voltage, current, result);
       } else {
-        resultDiv.textContent = "Please enter voltage and current values";
+        resultDiv.textContent =
+          "Por favor, insira os valores de tensão e corrente";
       }
       break;
   }
 }
 
-// Interactive Circuit Animation
+// Animação do circuito interativo
 const canvas = document.getElementById("circuit-canvas");
 const ctx = canvas.getContext("2d");
 let animationFrame;
@@ -75,7 +78,7 @@ function updateCircuitVisualization(voltage, current, resistance) {
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
 
-  // Cancel previous animation
+  // Cancelar animação anterior
   if (animationFrame) {
     cancelAnimationFrame(animationFrame);
   }
@@ -94,7 +97,7 @@ function updateCircuitVisualization(voltage, current, resistance) {
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw circuit
+    // Desenhar circuito
     ctx.beginPath();
     ctx.moveTo(50, canvas.height / 2);
     ctx.lineTo(canvas.width - 50, canvas.height / 2);
@@ -102,7 +105,7 @@ function updateCircuitVisualization(voltage, current, resistance) {
     ctx.lineWidth = 3;
     ctx.stroke();
 
-    // Draw electrons
+    // Desenhar elétrons
     electrons.forEach((electron) => {
       ctx.beginPath();
       ctx.arc(electron.x, electron.y, 4, 0, Math.PI * 2);
@@ -121,7 +124,7 @@ function updateCircuitVisualization(voltage, current, resistance) {
   animate();
 }
 
-// Interactive demo controls
+// Controles da demonstração interativa
 const voltageSlider = document.getElementById("voltage-slider");
 const resistanceSlider = document.getElementById("resistance-slider");
 const voltageValue = document.getElementById("voltage-value");
@@ -146,7 +149,7 @@ function updateInteractiveDemo() {
 voltageSlider.addEventListener("input", updateInteractiveDemo);
 resistanceSlider.addEventListener("input", updateInteractiveDemo);
 
-// Example loading
+// Carregar exemplos
 function loadExample(type) {
   const examples = {
     led: {
@@ -175,15 +178,15 @@ function loadExample(type) {
   document.querySelector("#calculator").scrollIntoView({ behavior: "smooth" });
 }
 
-// Circuit animation
+// Animação do circuito
 function updateCircuitAnimation(voltage, current) {
   const circuitAnimation = document.getElementById("circuit-animation");
   if (!circuitAnimation) return;
 
-  // Clear previous animation
+  // Limpar animação anterior
   circuitAnimation.innerHTML = "";
 
-  // Create electron particles
+  // Criar partículas de elétrons
   const particleCount = Math.min(Math.ceil(current * 10), 20);
 
   for (let i = 0; i < particleCount; i++) {
@@ -203,41 +206,41 @@ function updateCircuitAnimation(voltage, current) {
   }
 }
 
-// Resource modal
+// Modal de recursos
 function showResourceModal(type) {
   const modal = document.getElementById("resource-modal");
   const content = document.getElementById("modal-content");
   const resources = {
     basics: {
-      title: "Electronics Basics",
+      title: "Noções Básicas de Eletrônica",
       content: `
-                <h3>Understanding Electronic Components</h3>
+                <h3>Compreendendo Componentes Eletrônicos</h3>
                 <ul>
-                    <li>Resistors: Control current flow</li>
-                    <li>Capacitors: Store electrical charge</li>
-                    <li>Inductors: Store energy in magnetic fields</li>
+                    <li>Resistores: Controlam o fluxo de corrente</li>
+                    <li>Capacitores: Armazenam carga elétrica</li>
+                    <li>Indutores: Armazenam energia em campos magnéticos</li>
                 </ul>
             `,
     },
     safety: {
-      title: "Safety Guidelines",
+      title: "Diretrizes de Segurança",
       content: `
-                <h3>Working Safely with Electronics</h3>
+                <h3>Trabalhando com Segurança em Eletrônica</h3>
                 <ul>
-                    <li>Always disconnect power before working on circuits</li>
-                    <li>Use appropriate safety equipment</li>
-                    <li>Never exceed component ratings</li>
+                    <li>Sempre desconecte a energia antes de trabalhar em circuitos</li>
+                    <li>Use equipamentos de segurança apropriados</li>
+                    <li>Nunca exceda os limites dos componentes</li>
                 </ul>
             `,
     },
     calculations: {
-      title: "Advanced Calculations",
+      title: "Cálculos Avançados",
       content: `
-                <h3>Beyond Ohm's Law</h3>
+                <h3>Além da Lei de Ohm</h3>
                 <ul>
-                    <li>Power calculations: P = V × I</li>
-                    <li>Energy consumption: E = P × t</li>
-                    <li>Heat dissipation: P = I²R</li>
+                    <li>Cálculos de potência: P = V × I</li>
+                    <li>Consumo de energia: E = P × t</li>
+                    <li>Dissipação de calor: P = I²R</li>
                 </ul>
             `,
     },
@@ -251,7 +254,7 @@ function showResourceModal(type) {
   modal.style.display = "block";
 }
 
-// Close modal
+// Fechar modal
 document.querySelector(".close-modal").addEventListener("click", () => {
   document.getElementById("resource-modal").style.display = "none";
 });
@@ -263,7 +266,7 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// Add animation to example cards on scroll
+// Adicionar animação aos cartões de exemplo ao rolar
 const observerOptions = {
   threshold: 0.2,
 };
@@ -284,7 +287,7 @@ document.querySelectorAll(".example-card").forEach((card) => {
   observer.observe(card);
 });
 
-// Highlight active navigation section
+// Destacar seção ativa na navegação
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-links a");
