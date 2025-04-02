@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Understanding Ohm's Law - Interactive Guide</title>
+    <title>Entendendo a Lei de Ohm - Guia Interativo</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="container">
-        <div class="logo">⚡ Ohm's Law</div>
+        <div class="logo">⚡ Lei de Ohm</div>
         <ul class="nav-links">
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#calculator">Calculator</a></li>
-          <li><a href="#examples">Examples</a></li>
-          <li><a href="#interactive">Interactive</a></li>
-          <li><a href="#applications">Applications</a></li>
+          <li><a href="#introduction">Introdução</a></li>
+          <li><a href="#calculator">Calculadora</a></li>
+          <li><a href="#examples">Exemplos</a></li>
+          <li><a href="#interactive">Interativo</a></li>
+          <li><a href="#applications">Aplicações</a></li>
         </ul>
         <button class="theme-toggle">🌙</button>
       </div>
@@ -23,17 +23,16 @@
 
     <header class="hero">
       <div class="container">
-        <h1>Understanding Ohm's Law</h1>
+        <h1>Entendendo a Lei de Ohm</h1>
         <p>
-          V = I × R: The fundamental relationship between Voltage, Current, and
-          Resistance
+          V = I × R: A relação fundamental entre Tensão, Corrente e Resistência
         </p>
         <div class="hero-buttons">
           <a href="#calculator" class="cta-button primary"
-            >Try the Calculator</a
+            >Experimente a Calculadora</a
           >
           <a href="#interactive" class="cta-button secondary"
-            >Interactive Demo</a
+            >Demonstração Interativa</a
           >
         </div>
       </div>
@@ -41,21 +40,21 @@
 
     <section id="introduction" class="section">
       <div class="container">
-        <h2>What is Ohm's Law?</h2>
+        <h2>O que é a Lei de Ohm?</h2>
         <div class="content-grid">
           <div class="text-content">
             <p>
-              Ohm's Law states that the current flowing through a conductor is
-              directly proportional to the voltage across the conductor and
-              inversely proportional to its resistance.
+              A Lei de Ohm afirma que a corrente que flui através de um condutor
+              é diretamente proporcional à tensão aplicada a ele e inversamente
+              proporcional à sua resistência.
             </p>
             <div class="formula">
               <p class="large">V = I × R</p>
-              <p>Where:</p>
+              <p>Onde:</p>
               <ul>
-                <li>V = Voltage (Volts, V)</li>
-                <li>I = Current (Amperes, A)</li>
-                <li>R = Resistance (Ohms, Ω)</li>
+                <li>V = Tensão (Volts, V)</li>
+                <li>I = Corrente (Amperes, A)</li>
+                <li>R = Resistência (Ohms, Ω)</li>
               </ul>
             </div>
             <div class="formula-visualization">
@@ -64,19 +63,19 @@
                 <div class="triangle-side i">I</div>
                 <div class="triangle-side r">R</div>
               </div>
-              <p>Cover the quantity you want to calculate!</p>
+              <p>Cubra a variável que deseja calcular!</p>
             </div>
           </div>
           <div class="image-content">
             <img
               src="https://images.unsplash.com/photo-1620283085068-5aab84e2db8e?auto=format&fit=crop&w=800&q=80"
-              alt="Electric Circuit"
+              alt="Circuito Elétrico"
               class="rounded-image"
             />
             <div class="image-caption">
               <p>
-                Understanding electrical relationships is crucial for modern
-                technology
+                Compreender relações elétricas é essencial para a tecnologia
+                moderna
               </p>
             </div>
           </div>
@@ -86,54 +85,54 @@
 
     <section id="calculator" class="section calculator-section">
       <div class="container">
-        <h2>Ohm's Law Calculator</h2>
+        <h2>Calculadora da Lei de Ohm</h2>
         <div class="calculator-grid">
           <div class="calculator-card">
             <div class="input-group">
-              <label for="voltage">Voltage (V)</label>
+              <label for="voltage">Tensão (V)</label>
               <input
                 type="number"
                 id="voltage"
-                placeholder="Enter voltage"
+                placeholder="Digite a tensão"
                 step="0.1"
               />
               <div class="unit">V</div>
             </div>
             <div class="input-group">
-              <label for="current">Current (A)</label>
+              <label for="current">Corrente (A)</label>
               <input
                 type="number"
                 id="current"
-                placeholder="Enter current"
+                placeholder="Digite a corrente"
                 step="0.001"
               />
               <div class="unit">A</div>
             </div>
             <div class="input-group">
-              <label for="resistance">Resistance (Ω)</label>
+              <label for="resistance">Resistência (Ω)</label>
               <input
                 type="number"
                 id="resistance"
-                placeholder="Enter resistance"
+                placeholder="Digite a resistência"
                 step="0.1"
               />
               <div class="unit">Ω</div>
             </div>
             <div class="calculator-buttons">
               <button onclick="calculate('voltage')" class="calc-button">
-                Calculate Voltage
+                Calcular Tensão
               </button>
               <button onclick="calculate('current')" class="calc-button">
-                Calculate Current
+                Calcular Corrente
               </button>
               <button onclick="calculate('resistance')" class="calc-button">
-                Calculate Resistance
+                Calcular Resistência
               </button>
             </div>
             <div id="result" class="result"></div>
             <div class="power-calculation">
-              <h3>Power Calculation</h3>
-              <p id="power-result">Power (P) = 0.00 Watts</p>
+              <h3>Cálculo de Potência</h3>
+              <p id="power-result">Potência (P) = 0.00 Watts</p>
             </div>
           </div>
           <div class="live-visualization">
@@ -145,11 +144,11 @@
 
     <section id="interactive" class="section">
       <div class="container">
-        <h2>Interactive Circuit</h2>
+        <h2>Circuito Interativo</h2>
         <div class="interactive-demo">
           <div class="circuit-controls">
             <div class="slider-container">
-              <label for="voltage-slider">Voltage (0-12V)</label>
+              <label for="voltage-slider">Tensão (0-12V)</label>
               <input
                 type="range"
                 id="voltage-slider"
@@ -161,7 +160,7 @@
               <span id="voltage-value">5V</span>
             </div>
             <div class="slider-container">
-              <label for="resistance-slider">Resistance (0-1000Ω)</label>
+              <label for="resistance-slider">Resistência (0-1000Ω)</label>
               <input
                 type="range"
                 id="resistance-slider"
@@ -174,120 +173,17 @@
             </div>
           </div>
           <div class="circuit-animation" id="circuit-animation">
-            <!-- Animation will be handled by JavaScript -->
+            <!-- Animação será controlada por JavaScript -->
           </div>
           <div class="circuit-readings">
             <div class="reading">
-              <span class="label">Current:</span>
+              <span class="label">Corrente:</span>
               <span id="current-reading">0.05A</span>
             </div>
             <div class="reading">
-              <span class="label">Power:</span>
+              <span class="label">Potência:</span>
               <span id="power-reading">0.25W</span>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="examples" class="section">
-      <div class="container">
-        <h2>Practical Examples</h2>
-        <div class="examples-grid">
-          <div class="example-card">
-            <img
-              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
-              alt="LED Circuit"
-              class="example-image"
-            />
-            <h3>LED Circuit</h3>
-            <p>
-              A typical LED requires 2V and 20mA current. Using Ohm's Law, we
-              can calculate the necessary resistor value for a 5V power supply.
-            </p>
-            <div class="calculation">
-              <p>R = (5V - 2V) ÷ 0.02A = 150Ω</p>
-            </div>
-            <button class="try-it-button" onclick="loadExample('led')">
-              Try it yourself
-            </button>
-          </div>
-          <div class="example-card">
-            <img
-              src="https://plus.unsplash.com/premium_photo-1682145728214-dbd62535af3f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Battery Circuit"
-              class="example-image"
-            />
-            <h3>Battery Circuit</h3>
-            <p>
-              A 9V battery powering a circuit with a 100Ω resistor. We can
-              calculate the current flowing through the circuit.
-            </p>
-            <div class="calculation">
-              <p>I = 9V ÷ 100Ω = 0.09A = 90mA</p>
-            </div>
-            <button class="try-it-button" onclick="loadExample('battery')">
-              Try it yourself
-            </button>
-          </div>
-          <div class="example-card">
-            <img
-              src="https://images.unsplash.com/photo-1597225244660-1cd128c64284?auto=format&fit=crop&w=800&q=80"
-              alt="Phone Charger"
-              class="example-image"
-            />
-            <h3>Phone Charger</h3>
-            <p>
-              A smartphone charger outputs 5V and the phone draws 2A of current.
-              Calculate the effective resistance of the charging circuit.
-            </p>
-            <div class="calculation">
-              <p>R = 5V ÷ 2A = 2.5Ω</p>
-            </div>
-            <button class="try-it-button" onclick="loadExample('charger')">
-              Try it yourself
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="applications" class="section">
-      <div class="container">
-        <h2>Real-World Applications</h2>
-        <div class="applications-grid">
-          <div class="application-card">
-            <div class="card-icon">🏠</div>
-            <h3>Home Electronics</h3>
-            <p>
-              Understanding power requirements and safety limits for household
-              devices.
-            </p>
-            <ul class="application-list">
-              <li>Appliance power consumption</li>
-              <li>Circuit breaker sizing</li>
-              <li>Wire gauge selection</li>
-            </ul>
-          </div>
-          <div class="application-card">
-            <div class="card-icon">⚡</div>
-            <h3>Circuit Design</h3>
-            <p>Designing safe and efficient electronic circuits.</p>
-            <ul class="application-list">
-              <li>Component selection</li>
-              <li>Power distribution</li>
-              <li>Heat management</li>
-            </ul>
-          </div>
-          <div class="application-card">
-            <div class="card-icon">🏭</div>
-            <h3>Power Distribution</h3>
-            <p>Planning electrical systems for buildings and infrastructure.</p>
-            <ul class="application-list">
-              <li>Load calculation</li>
-              <li>Voltage drop analysis</li>
-              <li>Safety planning</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -297,30 +193,30 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h4>Quick Links</h4>
+            <h4>Links Rápidos</h4>
             <ul>
-              <li><a href="#introduction">Introduction</a></li>
-              <li><a href="#calculator">Calculator</a></li>
-              <li><a href="#examples">Examples</a></li>
-              <li><a href="#applications">Applications</a></li>
+              <li><a href="#introduction">Introdução</a></li>
+              <li><a href="#calculator">Calculadora</a></li>
+              <li><a href="#examples">Exemplos</a></li>
+              <li><a href="#applications">Aplicações</a></li>
             </ul>
           </div>
           <div class="footer-section">
-            <h4>Resources</h4>
+            <h4>Recursos</h4>
             <ul>
               <li>
                 <a href="#" onclick="showResourceModal('basics')"
-                  >Electronics Basics</a
+                  >Noções Básicas de Eletrônica</a
                 >
               </li>
               <li>
                 <a href="#" onclick="showResourceModal('safety')"
-                  >Safety Guidelines</a
+                  >Diretrizes de Segurança</a
                 >
               </li>
               <li>
                 <a href="#" onclick="showResourceModal('calculations')"
-                  >Advanced Calculations</a
+                  >Cálculos Avançados</a
                 >
               </li>
             </ul>
@@ -328,19 +224,11 @@
         </div>
         <div class="footer-bottom">
           <p>
-            © 2024 Ohm's Law Interactive Guide. Created for educational
-            purposes.
+            © 2024 Guia Interativo da Lei de Ohm. Criado para fins educacionais.
           </p>
         </div>
       </div>
     </footer>
-
-    <div id="resource-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <div id="modal-content"></div>
-      </div>
-    </div>
 
     <script src="scripts.js"></script>
   </body>
